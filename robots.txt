@@ -1,0 +1,49 @@
+User-agent: Googlebot
+Disallow:
+
+User-agent: Googlebot-News
+Disallow:
+
+User-agent: Googlebot-Image
+Disallow:
+
+User-agent: Googlebot-Mobile
+Disallow:
+
+User-agent: Googlebot-Video
+Disallow:
+
+User-agent: Mediapartners-Google
+Disallow:
+
+User-agent: Bingbot
+Disallow:
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: ia_archiver
+Disallow: /
+
+User-agent: Yandex
+Disallow: /
+
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: Sogou
+Disallow: /
+
+User-agent: *
+Disallow: /
+
+Sitemap: https://www.jobsinajmer.in/sitemap.xml

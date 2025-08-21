@@ -1647,6 +1647,74 @@ a:hover {
     }
 }
 
+      /* For Phone Screen CSS */
+        @media only screen and (max-width: 768px) {
+            .whatsapp-join-button {
+                position: fixed;
+                right: -10px; /* Button Right Side Margin */
+                top: 50%;
+                transform: translateY(-10%);
+                background-color: #25D366;
+                color: white;
+                border-top-left-radius: 30px;
+                border-bottom-left-radius: 30px;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+                display: flex;
+                align-items: center;
+                padding: 5px 20px;
+                font-size: 16px;
+                font-weight: bold;
+                z-index: 1000;
+                cursor: pointer;
+                text-decoration: none;
+                transition: right 0.3s ease-in-out;
+            }
+
+            .whatsapp-join-button img {
+                width: 24px;
+                height: 24px;
+                margin-right: 5px;
+            }
+
+            /* Animated Outline */
+            .whatsapp-join-button::before {
+                content: '';
+                position: absolute;
+                top: -4px;
+                left: -4px;
+                right: -4px;
+                bottom: -4px;
+                border-radius: 30px 0 0 30px;
+                border: 2px solid #25D366;
+                animation: animate-outline 1s linear infinite;
+            }
+
+            /* Hover Effect */
+            .whatsapp-join-button:hover {
+                right: 0; /* Button Full Show */
+                background-color: #25D366; /* Background Color */
+            }
+
+            /* Animation */
+            @keyframes animate-outline {
+                0% {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+                100% {
+                    transform: scale(1.15);
+                    opacity: 0;
+                }
+            }
+        }
+
+        /* PC Hiding CSS */
+        @media only screen and (min-width: 769px) {
+            .whatsapp-join-button {
+                display: none;
+            }
+        }
   </style>
                                                                                                   
 </head>

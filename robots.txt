@@ -47,6 +47,6 @@ User-agent: Sogou
 Disallow: /
 
 User-agent: *
-Disallow: /
+Disallow:
 
 Sitemap: https://www.jobsinajmer.in/sitemap.xml

@@ -1,8 +1,8 @@
 /* CSS Custom Properties */
 :root {
-    --primary-color: /*#253d2c*/ #2a0845;
-    --secondary-color: /*#2e6f40*/ #6441A5;
-    --accent-color: /*#2e6f40*/ #6441A5;
+    --primary-color: /*#253d2c*/ #410D00;
+    --secondary-color: /*#2e6f40*/ #9F4707;
+    --accent-color: /*#2e6f40*/ #9F4707;
     --success-color: #28a745;
     --warning-color: #ffc107;
     --danger-color: #dc3545;

@@ -5,34 +5,45 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
+
 <url>
   <loc>https://www.jobsinajmer.in/</loc>
-  <lastmod>2025-09-02T09:26:11+00:00</lastmod>
+  <lastmod>2025-09-07T17:38:06+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.jobsinajmer.in/male</loc>
+  <lastmod>2025-09-07T17:38:06+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.jobsinajmer.in/female</loc>
+  <lastmod>2025-09-07T17:38:06+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://www.jobsinajmer.in/about</loc>
-  <lastmod>2025-09-02T09:26:11+00:00</lastmod>
+  <lastmod>2025-09-07T17:38:06+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.jobsinajmer.in/contact</loc>
-  <lastmod>2025-09-02T09:26:11+00:00</lastmod>
+  <lastmod>2025-09-07T17:38:06+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.jobsinajmer.in/author</loc>
-  <lastmod>2025-09-02T09:26:11+00:00</lastmod>
+  <lastmod>2025-09-07T17:38:06+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.jobsinajmer.in/disclaimer</loc>
-  <lastmod>2025-09-02T09:26:11+00:00</lastmod>
+  <lastmod>2025-09-07T17:38:06+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.jobsinajmer.in/privacy-policy</loc>
-  <lastmod>2025-09-02T09:26:11+00:00</lastmod>
+  <lastmod>2025-09-07T17:38:06+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 

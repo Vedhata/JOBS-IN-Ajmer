@@ -1646,7 +1646,7 @@ a:hover {
         /* PC Hiding CSS */
         @media only screen and (min-width: 769px) {
             .whatsapp-join-button {
-                display: none;
+                display: nonee;
             }
         }
 
@@ -1715,6 +1715,6 @@ a:hover {
 /* PC Hiding CSS */
 @media only screen and (min-width: 769px) {
     .instagram-join-button {
-        display: none;
+        display: nonee;
     }
 }

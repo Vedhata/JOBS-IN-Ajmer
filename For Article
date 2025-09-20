@@ -1,87 +1,409 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
-    <meta name="description" content="Description">
-    <meta name="keywords" content="Author & Creator of JOBS IN Ajmer">
-    
-    <!-- <link rel="icon" type="image/x-icon" href="/favicon.ico"> -->
-  
-  <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/Favicon/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="/Favicon/favicon.svg" />
-<link rel="shortcut icon" href="/Favicon/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="/Favicon/apple-touch-icon.png" />
-<meta name="apple-mobile-web-app-title" content="JOBS" />
-<link rel="manifest" href="/Favicon/site.webmanifest" />
-    
-    <!-- Canonical URL (to avoid duplicate content issues) -->
-<link rel="canonical" href="https://jobsinajmer.in/" />
+<!-- Article Section --><section id="article" class="article-section">
 
-<!-- Author Name -->
-<meta name="author" content="Ved" />
+    <div class="container">
 
-<!-- Language -->
-<meta name="language" content="English" />
+        <div class="section-header">
 
-<!-- Robots Meta Tag (for search engine crawling) -->
-<meta name="robots" content="index, follow, noarchive, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Title">
-    <meta property="og:description" content="Description">
-    <!--<meta property="og:image" content="https://lh3.googleusercontent.com/d/1E1HBHrV1leyvGkyyScbbiNr4W_YOQNN2"/>-->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://jobsinajmer.in/">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Custom CSS -->
-   <link rel="stylesheet" href="style.css">
-  
-<!-------------------------------------------------
-Name	        : JOBS IN Ajmer
-Version		: 3.0
-Designer	: Ved
-URL	        : https://jobsinajmer.in/
---------------------------------------------------->
-                                                                                                  
-</head>
-<body>
-        <section id="about" class="article-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Title</h2>
-                
+            <h2 class="section-title">Title</h2>
+
+            <p class="section-subtitle">Subtitle</p>
+
+        </div>
+
+        
+
+        <div class="article-content">
+
+            <div class="article-intro">
+
+                <p class="article-text">
+
+                 Introduction
+
+                </p>
+
             </div>
-            
-            <div class="article-content">
-                <div class="article-intro">
-                    
-                    <p class="article-text">
-                    Hi, my name is <strong>VED</strong>. I am the creator of 
-    <strong>JOBS IN Ajmer</strong>, a platform dedicated to sharing 
-    the latest job opportunities available in Ajmer and nearby areas.</p>
 
-                        <p class="article-text">
-                     I started this website to make job information easily accessible 
-    for everyone in Ajmer. My goal is to provide authentic, simple, 
-    and updated job details that can help job seekers connect with the 
-    right opportunities quickly.</p>
 
-                        <p class="article-text">
-                    Through this platform, I am committed to supporting job seekers 
-    and making the job search process easier and more reliable.</p>
+
+            <h3 class="article-heading">List Heading</h3>
+
+            <p class="article-text">
+
+             List Paragraph
+
+            </p>
+
+
+
+            <ul class="article-list">
+
+                <li>List</li>
+
+                <li>List</li>
+
+                <li>List</li>
+
+                <li>List</li>
+
+                <li>List</li>
+
+                <li>List</li>
+
+            </ul>
+
+
+
+            <h3 class="article-heading">Table Heading</h3>
+
+            <div class="article-table-container">
+
+                <table class="article-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Table Head Text</th>
+
+                            <th>Table Head Text</th>
+
+                            <th>Table Head Text</th>
+
+                            <th>Table Head Text</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>Table Body Text</td>
+
+                            <td>Table Body Text</td>
+
+                            <td>Table Body Text</td>
+
+                            <td>Table Body Text</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Table Body Text</td>
+
+                            <td>Table Body Text</td>
+
+                            <td>Table Body Text</td>
+
+                            <td>Table Body Text</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Table Body Text</td>
+
+                            <td>Table Body</td>
+
+                            <td>Table Body</td>
+
+                            <td>Table Body</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Table Body Text</td>
+
+                            <td>Table Body Text</td>
+
+                            <td>Table Body Text</td>
+
+                            <td>Table Body Text</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Table Body Text</td>
+
+                            <td>Table Body Text</td>
+
+                            <td>Table Body Text</td>
+
+                            <td>Table Body Text</td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+
+            <h3 class="article-heading">Heading</h3>
+
+            <div class="article-strategies">
+
+                <div class="strategy-item">
+
+                   <!-- Image Here -->
+
+                    <div class="strategy-content">
+
+                        <h4 class="strategy-title">Heading</h4>
+
+                        <p class="strategy-text">
+
+                            Paragraph</p>
+
+                    </div>
+
                 </div>
-              </div>
-          </div>
-            </section>
+
+
+
+                <div class="strategy-item">
+
+                  <!-- Image Here -->
+
+                    <div class="strategy-content">
+
+                        <h4 class="strategy-title">Heading</h4>
+
+                        <p class="strategy-text">
+
+                            Paragraph</p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="strategy-item">
+
+                    <!-- Image Here -->
+
+                    <div class="strategy-content">
+
+                        <h4 class="strategy-title">Heading</h4>
+
+                        <p class="strategy-text">
+
+                            Paragraph</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <h3 class="article-heading">Heading</h3>
+
+            <p class="article-text">
+
+                Paragraph</p>
+
+
+
+            <div class="salary-breakdown">
+
+                <div class="salary-card">
+
+                    <h4 class="salary-level">Heading</h4>
+
+                    <p class="salary-range">Paragraph</p>
+
+                    <ul class="salary-details">
+
+                        <li>List</li>
+
+                        <li>List</li>
+
+                        <li>List</li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <div class="salary-card">
+
+                    <h4 class="salary-level">Heading</h4>
+
+                    <p class="salary-range">Paragraph</p>
+
+                    <ul class="salary-details">
+
+                        <li>List</li>
+
+                        <li>List</li>
+
+                        <li>List</li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <div class="salary-card">
+
+                    <h4 class="salary-level">Heading</h4>
+
+                    <p class="salary-range">Paragraph</p>
+
+                    <ul class="salary-details">
+
+                        <li>List</li>
+
+                        <li>List</li>
+
+                        <li>List</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+
+            <h3 class="article-heading">Frequently Asked Questions</h3>
+
+            <div class="faq-section">
+
+                <div class="faq-item">
+
+                    <div class="faq-question">
+
+                        <h4>Question</h4>
+
+                        <i class="fas fa-chevron-down"></i>
+
+                    </div>
+
+                    <div class="faq-answer">
+
+                        <p>Answer</p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="faq-item">
+
+                    <div class="faq-question">
+
+                        <h4>Question</h4>
+
+                        <i class="fas fa-chevron-down"></i>
+
+                    </div>
+
+                    <div class="faq-answer">
+
+                        <p>Answer</p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="faq-item">
+
+                    <div class="faq-question">
+
+                        <h4>Question</h4>
+
+                        <i class="fas fa-chevron-down"></i>
+
+                    </div>
+
+                    <div class="faq-answer">
+
+                        <p>Answer</p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="faq-item">
+
+                    <div class="faq-question">
+
+                        <h4>Question</h4>
+
+                        <i class="fas fa-chevron-down"></i>
+
+                    </div>
+
+                    <div class="faq-answer">
+
+                        <p>Answer</p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="faq-item">
+
+                    <div class="faq-question">
+
+                        <h4>Question</h4>
+
+                        <i class="fas fa-chevron-down"></i>
+
+                    </div>
+
+                    <div class="faq-answer">
+
+                        <p>Answer</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <h3 class="article-heading">Conclusion</h3>
+
+            <div class="article-conclusion">
+
+             <!-- Image Here -->
+
+                <p class="article-text">
+
+                   Paragraph</p></div>
+
+                    <h3 class="article-heading">Final Thought</h3>
+
+             <div class="article-conclusion">   <p class="article-text">Paragraph</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
     
-</body>
-</html>
+
+</section>

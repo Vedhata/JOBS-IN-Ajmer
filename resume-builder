@@ -6,6 +6,58 @@
     <title>Resume Builder</title>
     <meta name="description" content="Create a professional and attractive resume in minutes with our easy-to-use, customizable resume builder. Choose your colors, fonts, and layouts.">
     <meta name="keywords" content="resume builder, cv builder, online resume maker, professional resume">
+
+ <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/Favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/Favicon/favicon.svg" />
+<link rel="shortcut icon" href="/Favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/Favicon/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="JOBS" />
+<link rel="manifest" href="/Favicon/site.webmanifest" />
+    
+    <!-- Canonical URL (to avoid duplicate content issues) -->
+<link rel="canonical" href="https://www.jobsinajmer.in/resume-builder" />
+
+<!-- Author Name -->
+<meta name="author" content="Ved" />
+  
+  <!-- Adsense Verification -->
+  <meta name="google-adsense-account" content="ca-pub-9608671251714278">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9608671251714278"
+     crossorigin="anonymous"></script>
+
+<!-- Language -->
+<meta name="language" content="English" />
+
+<!-- Robots Meta Tag (for search engine crawling) -->
+<meta name="robots" content="index, follow, noarchive, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Resume Builder">
+    <meta property="og:description" content="Create a professional and attractive resume in minutes with our easy-to-use, customizable resume builder. Choose your colors, fonts, and layouts.">
+    <meta property="og:image" content="https://lh3.googleusercontent.com/d/1E1HBHrV1leyvGkyyScbbiNr4W_YOQNN2"/>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.jobsinajmer.in/resume-builder">
+    
+    <!-- Custom CSS -->
+   <link rel="stylesheet" href="style.css">
+  
+<!-------------------------------------------------
+Name	    : JOBS IN Ajmer
+Version		: 3.0
+Designer	: Ved
+URL		    : https://www.jobsinajmer.in/
+--------------------------------------------------->
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X04PF4XY30"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-X04PF4XY30');
+</script>
     
     <!-- Tailwind CSS for rapid UI development -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -129,143 +181,7 @@ Web Innovators LLC | Junior Developer | 2018-2020 | Developed and maintained cli
         </div>
     </main>
 
-    <script>
-        // Function to update the resume preview in real-time
-        function updateResume() {
-            const values = {
-                name: document.getElementById('name').value,
-                title: document.getElementById('title').value,
-                phone: document.getElementById('phone').value,
-                email: document.getElementById('email').value,
-                address: document.getElementById('address').value,
-                linkedin: document.getElementById('linkedin').value,
-                website: document.getElementById('website').value,
-                summary: document.getElementById('summary').value,
-                experience: document.getElementById('experience').value,
-                education: document.getElementById('education').value,
-                projects: document.getElementById('projects').value,
-                skills: document.getElementById('skills').value,
-                languages: document.getElementById('languages').value,
-            };
 
-            const contactInfo = [
-                { value: values.phone, icon: 'fas fa-phone' },
-                { value: values.email, icon: 'fas fa-envelope' },
-                { value: values.address, icon: 'fas fa-map-marker-alt' },
-                { value: values.linkedin, icon: 'fab fa-linkedin' },
-                { value: values.website, icon: 'fas fa-globe' },
-            ].filter(item => item.value).map(item => `
-                <div class="flex items-start mb-3 text-sm">
-                    <i class="${item.icon} w-5 text-center mr-3 mt-1 opacity-80"></i>
-                    <span class="flex-1 break-all">${item.value}</span>
-                </div>`).join('');
 
-            const skillsHtml = values.skills ? values.skills.split(',').map(skill => `<span class="skill-badge inline-block text-xs font-medium mr-2 mb-2 px-3 py-1 rounded-full">${skill.trim()}</span>`).join('') : '';
-            const languagesHtml = values.languages ? `<p class="text-sm">${values.languages.replace(/,/g, ', ')}</p>` : '';
-
-            const experienceHtml = values.experience.split('---').map(exp => {
-                if (!exp.trim()) return '';
-                const [company, jobTitle, years, ...descriptions] = exp.trim().split('|').map(p => p.trim());
-                const descList = descriptions.map(d => `<li class="ml-5">${d}</li>`).join('');
-                return `<div class="mb-4">
-                            <div class="flex justify-between items-baseline">
-                                <h3 class="text-lg font-semibold">${company || ''}</h3>
-                                <p class="text-sm font-medium text-gray-500">${years || ''}</p>
-                            </div>
-                            <p class="text-md italic">${jobTitle || ''}</p>
-                            <ul class="list-disc mt-1 text-sm">${descList}</ul>
-                        </div>`;
-            }).join('');
-            
-            const educationHtml = values.education.split('---').map(edu => {
-                if (!edu.trim()) return '';
-                const [school, degree, years, grade] = edu.trim().split('|').map(s => s.trim());
-                return `<div class="mb-2">
-                            <div class="flex justify-between items-baseline">
-                               <h3 class="text-lg font-semibold">${school || ''}</h3>
-                               <p class="text-sm font-medium text-gray-500">${years || ''}</p>
-                            </div>
-                            <p class="text-md italic">${degree || ''}</p>
-                            ${grade ? `<p class="text-sm">${grade}</p>` : ''}
-                        </div>`;
-            }).join('');
-            
-            const projectsHtml = values.projects.split('---').map(proj => {
-                if (!proj.trim()) return '';
-                const [name, desc, stack] = proj.trim().split('|').map(s => s.trim());
-                return `<div class="mb-4">
-                            <h3 class="text-lg font-semibold">${name || ''}</h3>
-                            <p class="text-sm mb-1">${desc || ''}</p>
-                            ${stack ? `<p class="text-sm"><strong>Tech Stack:</strong> ${stack}</p>` : ''}
-                        </div>`;
-            }).join('');
-            
-            const generateRightSection = (title, content, id) => content.trim() ? `<section id="section-${id}" class="mb-6">
-                <h2 class="text-xl font-bold border-b-2 pb-1 mb-3">${title}</h2>
-                <div class="leading-relaxed">${content}</div>
-                </section>` : '';
-
-            const generateLeftSection = (title, content) => content.trim() ? `<section class="mb-6">
-                <h3 class="text-lg font-bold uppercase tracking-wider border-b-2 border-current border-opacity-50 pb-1 mb-3">${title}</h3>
-                <div class="opacity-90 leading-relaxed">${content}</div>
-                </section>` : '';
-
-            const resumeHtml = `<div class="flex flex-col md:flex-row min-h-full">
-                    <aside class="left-column w-full md:w-1/3 p-6 md:p-8">
-                        <div class="mb-8 text-center md:text-left">
-                            <h1 class="text-4xl font-bold tracking-wider">${values.name || 'Your Name'}</h1>
-                            <p class="text-xl opacity-90 mt-1">${values.title || 'Your Title'}</p>
-                        </div>
-                        ${generateLeftSection('Contact', contactInfo)}
-                        ${generateLeftSection('Skills', skillsHtml)}
-                        ${generateLeftSection('Languages', languagesHtml)}
-                    </aside>
-                    <main class="right-column w-full md:w-2/3 p-6 md:p-8">
-                        ${generateRightSection('Professional Summary', values.summary.replace(/\n/g, '<br>'), 'summary')}
-                        ${generateRightSection('Work Experience', experienceHtml, 'experience')}
-                        ${generateRightSection('Education', educationHtml, 'education')}
-                        ${generateRightSection('Projects', projectsHtml, 'projects')}
-                    </main>
-                </div>`;
-
-            document.getElementById('resume-preview').innerHTML = resumeHtml;
-        }
-
-        // Function to handle all theme and color changes
-        function handleThemeChange() {
-            const root = document.documentElement;
-            root.style.setProperty('--primary-color', document.getElementById('theme-color').value);
-            root.style.setProperty('--heading-color', document.getElementById('heading-color').value);
-            root.style.setProperty('--sidebar-text-color', document.getElementById('sidebar-text-color').value);
-            root.style.setProperty('--subheading-color', document.getElementById('subheading-color').value);
-            root.style.setProperty('--body-text-color', document.getElementById('body-text-color').value);
-            root.style.setProperty('--font-family', document.getElementById('font-family').value);
-            // No need to call updateResume() here as styles are applied directly via CSS variables
-        }
-        
-        // Function to print the resume
-        function printResume() {
-            window.print();
-        }
-
-        // Add event listeners to all input fields for content changes
-        document.querySelectorAll('input, textarea').forEach(element => {
-            // Exclude color inputs from this listener
-            if (element.type !== 'color') {
-                element.addEventListener('input', updateResume);
-            }
-        });
-
-        // Add event listeners for all design controls (font and colors)
-        document.querySelectorAll('#font-family, input[type="color"]').forEach(element => {
-            element.addEventListener('input', handleThemeChange);
-        });
-        
-        // Initial call to populate the resume on page load
-        window.onload = () => {
-             updateResume();
-             handleThemeChange();
-        };
-    </script>
 </body>
 </html>

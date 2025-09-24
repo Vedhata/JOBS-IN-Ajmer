@@ -1,50 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<script src="chrome-extension://lgecefcjlholabgliikbfdifhdfbfnma/frame_ant/frame_ant.js"/>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
-<loc>https://www.jobsinajmer.in/</loc>
-<lastmod>2025-09-24T13:48:52+00:00</lastmod>
-<priority>1.00</priority>
+  <loc>https://www.jobsinajmer.in/</loc>
+  <lastmod>2025-09-24T14:17:35+00:00</lastmod>
+  <priority>1.00</priority>
 </url>
 <url>
-<loc>https://www.jobsinajmer.in/male</loc>
-<lastmod>2025-09-24T13:48:51+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://www.jobsinajmer.in/male</loc>
+  <lastmod>2025-09-24T14:17:35+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://www.jobsinajmer.in/female</loc>
-<lastmod>2025-09-24T13:48:52+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://www.jobsinajmer.in/female</loc>
+  <lastmod>2025-09-24T14:17:35+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://www.jobsinajmer.in/resume-builder</loc>
-<lastmod>2025-09-24T13:48:52+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://www.jobsinajmer.in/resume-builder</loc>
+  <lastmod>2025-09-24T14:17:35+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://www.jobsinajmer.in/about</loc>
-<lastmod>2025-09-24T13:48:51+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://www.jobsinajmer.in/about</loc>
+  <lastmod>2025-09-24T14:17:35+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://www.jobsinajmer.in/contact</loc>
-<lastmod>2025-09-24T13:48:52+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://www.jobsinajmer.in/contact</loc>
+  <lastmod>2025-09-24T14:17:35+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://www.jobsinajmer.in/author</loc>
-<lastmod>2025-09-24T13:48:51+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://www.jobsinajmer.in/author</loc>
+  <lastmod>2025-09-24T14:17:35+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://www.jobsinajmer.in/disclaimer</loc>
-<lastmod>2025-09-24T13:48:52+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://www.jobsinajmer.in/disclaimer</loc>
+  <lastmod>2025-09-24T14:17:35+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://www.jobsinajmer.in/privacy-policy</loc>
-<lastmod>2025-09-24T13:48:52+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://www.jobsinajmer.in/privacy-policy</loc>
+  <lastmod>2025-09-24T14:17:35+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
+
+
 </urlset>

@@ -1,7 +1,7 @@
  /* CSS Variables for full theme control */
         :root {
-            --primary-color: #3b82f6;      /* Controls sidebar BG */
-            --heading-color: #3b82f6;       /* Controls main H2 headings on the right */
+            --primary-color: #FF5722;      /* Controls sidebar BG */
+            --heading-color: #FF5722;       /* Controls main H2 headings on the right */
             --sidebar-text-color: #FFFFFF;  /* Controls all text in the left sidebar */
             --subheading-color: #1F2937;    /* Controls subheadings like company/school names */
             --body-text-color: #4B5563;     /* Controls main paragraph text */

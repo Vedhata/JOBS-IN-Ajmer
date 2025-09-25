@@ -5,7 +5,7 @@
             --sidebar-text-color: #FFFFFF;  /* Controls all text in the left sidebar */
             --subheading-color: #1F2937;    /* Controls subheadings like company/school names */
             --body-text-color: #4B5563;     /* Controls main paragraph text */
-            --font-family: serif;
+            --font-family: 'Poppins', sans-serif;
         }
 
         body {

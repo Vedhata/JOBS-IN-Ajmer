@@ -18,7 +18,7 @@
 
         /* Animated gradient for the top header */
         .animated-gradient {
-            background: linear-gradient(-45deg, #4f46e5, #FF5722, #14b8a6, #ef4444);
+            background: linear-gradient(-45deg, #4f46e5, #FF5722, #14b8a6, #4f46e5);
             background-size: 400% 400%;
             animation: gradientBG 15s ease infinite;
         }

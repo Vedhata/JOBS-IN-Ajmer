@@ -308,5 +308,205 @@ URL                    : https://www.jobsinajmer.in/
 
   <a href="https://www.whatsapp.com/channel/0029VbB6svQAzNbwWxdIea26" class="whatsapp-join-button" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
+<!-- इस पूरे स्क्रिप्ट टैग को कॉपी करें और अपनी वेबसाइट के </body> टैग के ठीक पहले पेस्ट कर दें -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // --- STEP 1: CSS स्टाइल बनाना ---
+        // यह CSS कोड ओवरले और टेक्स्ट को सुंदर और रेस्पॉन्सिव बनाने के लिए है
+        const styles = `
+            /* गूगल फ़ॉन्ट इम्पोर्ट */
+            @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap');
+
+            /* जब ओवरले सक्रिय हो तो बॉडी पर स्क्रॉलिंग को रोकने के लिए क्लास */
+            .overlay-active {
+                overflow: hidden;
+            }
+
+            #diwali-overlay-container {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: transparent;
+                z-index: 99999;
+                opacity: 1;
+                transition: opacity 2s ease-in-out;
+                pointer-events: none;
+            }
+
+            #fireworks-canvas {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            /* टेक्स्ट को सेंटर में रखने के लिए बेहतर स्टाइल */
+            .diwali-greeting-text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%; /* यह सुनिश्चित करता है कि टेक्स्ट कंटेनर पूरी चौड़ाई ले */
+                text-align: center;
+                z-index: 100000;
+                animation: fadeInGlow 3s ease-in-out forwards;
+                opacity: 0;
+            }
+
+            /* टेक्स्ट को साफ़ और आकर्षक बनाने के लिए नया स्टाइल */
+            .diwali-greeting-text h1 {
+                font-family: 'Baloo 2', cursive;
+                font-size: 6rem;
+                font-weight: 700;
+                color: #FFD54F; /* टेक्स्ट का एक बेस कलर */
+                /* सबसे महत्वपूर्ण बदलाव: गहरी परछाई और सुनहरी चमक */
+                text-shadow: 
+                    2px 2px 4px rgba(0, 0, 0, 0.7), /* गहरी परछाई, जो कंट्रास्ट देती है */
+                    0 0 15px #FF8F00, /* नारंगी चमक */
+                    0 0 25px #FFC107; /* सुनहरी चमक */
+                animation: fadeInGlow 3s ease-in-out forwards, subtlePulse 3s infinite ease-in-out 3s;
+            }
+            
+            /* मोबाइल और छोटी स्क्रीन के लिए टेक्स्ट का साइज़ एडजस्ट करना */
+            @media (max-width: 768px) {
+                .diwali-greeting-text h1 {
+                    font-size: 3.5rem;
+                }
+            }
+             @media (max-width: 480px) {
+                .diwali-greeting-text h1 {
+                    font-size: 2.8rem;
+                }
+            }
+
+
+            @keyframes fadeInGlow {
+                from { opacity: 0; transform: scale(0.8); }
+                to { opacity: 1; transform: scale(1); }
+            }
+
+            @keyframes subtlePulse {
+                0% { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), 0 0 15px #FF8F00, 0 0 25px #FFC107; }
+                50% { text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8), 0 0 20px #FF8F00, 0 0 35px #FFC107; }
+                100% { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), 0 0 15px #FF8F00, 0 0 25px #FFC107; }
+            }
+        `;
+
+        // --- STEP 2: पेज में जरूरी चीजें जोड़ना ---
+        const styleSheet = document.createElement("style");
+        styleSheet.innerText = styles;
+        document.head.appendChild(styleSheet);
+
+        const overlay = document.createElement('div');
+        overlay.id = 'diwali-overlay-container';
+
+        const greeting = document.createElement('div');
+        greeting.className = 'diwali-greeting-text';
+        greeting.innerHTML = '<h1>शुभ दीपावली</h1>';
+
+        const canvas = document.createElement('canvas');
+        canvas.id = 'fireworks-canvas';
+
+        overlay.appendChild(greeting);
+        overlay.appendChild(canvas);
+        document.body.appendChild(overlay);
+        document.body.classList.add('overlay-active');
+
+        // --- STEP 3: आतिशबाजी का एनीमेशन चलाना ---
+        const ctx = canvas.getContext('2d');
+        
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+
+        let fireworks = [];
+        let particles = [];
+        const gravity = 0.05;
+        const colors = ['#FFD700', '#FF4500', '#ADFF2F', '#40E0D0', '#FF69B4', '#1E90FF'];
+
+        class Firework {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = canvas.height;
+                this.targetX = this.x;
+                this.targetY = Math.random() * (canvas.height / 2);
+                this.speed = 2.5;
+                const angle = Math.atan2(this.targetY - this.y, this.targetX - this.x);
+                this.velocityX = Math.cos(angle) * this.speed;
+                this.velocityY = Math.sin(angle) * this.speed;
+                this.color = colors[Math.floor(Math.random() * colors.length)];
+            }
+            update() {
+                if (this.y <= this.targetY) { this.explode(); return true; }
+                this.x += this.velocityX; this.y += this.velocityY; return false;
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.moveTo(this.x, this.y);
+                ctx.lineTo(this.x - this.velocityX * 4, this.y - this.velocityY * 4);
+                ctx.strokeStyle = this.color; ctx.lineWidth = 2.5; ctx.stroke();
+            }
+            explode() {
+                for (let i = 0; i < 120; i++) particles.push(new Particle(this.x, this.y, this.color));
+            }
+        }
+
+        class Particle {
+            constructor(x, y, color) {
+                this.x = x; this.y = y; this.color = color;
+                const angle = Math.random() * Math.PI * 2;
+                const speed = Math.random() * 5 + 1;
+                this.friction = 0.98; this.alpha = 1; this.decay = Math.random() * 0.015 + 0.015;
+                this.velocityX = Math.cos(angle) * speed; this.velocityY = Math.sin(angle) * speed;
+            }
+            update() {
+                this.velocityX *= this.friction; this.velocityY *= this.friction;
+                this.velocityY += gravity; this.x += this.velocityX; this.y += this.velocityY;
+                this.alpha -= this.decay; return this.alpha <= this.decay;
+            }
+            draw() {
+                ctx.save(); ctx.globalAlpha = this.alpha; ctx.beginPath();
+                ctx.arc(this.x, this.y, 2, 0, Math.PI * 2, false);
+                ctx.fillStyle = this.color; ctx.fill(); ctx.restore();
+            }
+        }
+        
+        let lastLaunchTime = 0;
+        let animationFrameId;
+
+        function animate(currentTime) {
+            animationFrameId = requestAnimationFrame(animate);
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            if (currentTime - lastLaunchTime > 400 && fireworks.length < 10) {
+                fireworks.push(new Firework()); lastLaunchTime = currentTime;
+            }
+           
+            fireworks.forEach((f, i) => f.update() ? fireworks.splice(i, 1) : f.draw());
+            particles.forEach((p, i) => p.update() ? particles.splice(i, 1) : p.draw());
+        }
+        
+        animate(0);
+        
+        // --- STEP 4: कुछ सेकंड बाद ओवरले को हटाना ---
+        setTimeout(() => {
+            overlay.style.opacity = '0';
+            overlay.addEventListener('transitionend', () => {
+                cancelAnimationFrame(animationFrameId);
+                document.body.removeChild(overlay);
+                document.head.removeChild(styleSheet);
+                document.body.classList.remove('overlay-active');
+            }, { once: true });
+        }, 10000); // 10 सेकंड बाद ओवरले हट जाएगा
+
+        window.addEventListener('resize', resizeCanvas);
+    });
+</script>
+
 </body>
 </html>

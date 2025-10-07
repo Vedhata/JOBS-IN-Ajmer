@@ -312,16 +312,14 @@ URL                    : https://www.jobsinajmer.in/
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         // --- STEP 1: CSS स्टाइल बनाना ---
-        // यह CSS कोड ओवरले और टेक्स्ट को सुंदर और रेस्पॉन्सिव बनाने के लिए है
         const styles = `
-            /* गूगल फ़ॉन्ट इम्पोर्ट */
             @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap');
 
-            /* जब ओवरले सक्रिय हो तो बॉडी पर स्क्रॉलिंग को रोकने के लिए क्लास */
             .overlay-active {
                 overflow: hidden;
             }
 
+            /* महत्वपूर्ण बदलाव: Flexbox का उपयोग करके सेंटरिंग */
             #diwali-overlay-container {
                 position: fixed;
                 top: 0;
@@ -333,6 +331,11 @@ URL                    : https://www.jobsinajmer.in/
                 opacity: 1;
                 transition: opacity 2s ease-in-out;
                 pointer-events: none;
+                
+                /* फ्लेक्सबॉक्स गुण */
+                display: flex;
+                justify-content: center; /* हॉरिजॉन्टल सेंटर */
+                align-items: center;     /* वर्टीकल सेंटर */
             }
 
             #fireworks-canvas {
@@ -341,36 +344,30 @@ URL                    : https://www.jobsinajmer.in/
                 left: 0;
                 width: 100%;
                 height: 100%;
+                z-index: 1; /* कैनवास को पीछे रखें */
             }
 
-            /* टेक्स्ट को सेंटर में रखने के लिए बेहतर स्टाइल */
+            /* टेक्स्ट कंटेनर के लिए सरल स्टाइल */
             .diwali-greeting-text {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 100%; /* यह सुनिश्चित करता है कि टेक्स्ट कंटेनर पूरी चौड़ाई ले */
                 text-align: center;
-                z-index: 100000;
-                animation: fadeInGlow 3s ease-in-out forwards;
-                opacity: 0;
+                z-index: 2; /* टेक्स्ट को सबसे ऊपर रखें */
+                position: relative; /* z-index काम करे इसके लिए */
             }
 
-            /* टेक्स्ट को साफ़ और आकर्षक बनाने के लिए नया स्टाइल */
+            /* टेक्स्ट का स्टाइल वही है */
             .diwali-greeting-text h1 {
                 font-family: 'Baloo 2', cursive;
                 font-size: 6rem;
                 font-weight: 700;
-                color: #FFD54F; /* टेक्स्ट का एक बेस कलर */
-                /* सबसे महत्वपूर्ण बदलाव: गहरी परछाई और सुनहरी चमक */
+                color: #FFD54F;
                 text-shadow: 
-                    2px 2px 4px rgba(0, 0, 0, 0.7), /* गहरी परछाई, जो कंट्रास्ट देती है */
-                    0 0 15px #FF8F00, /* नारंगी चमक */
-                    0 0 25px #FFC107; /* सुनहरी चमक */
+                    2px 2px 4px rgba(0, 0, 0, 0.8),
+                    0 0 15px #FF8F00,
+                    0 0 25px #FFC107;
                 animation: fadeInGlow 3s ease-in-out forwards, subtlePulse 3s infinite ease-in-out 3s;
+                opacity: 0; /* एनीमेशन के लिए शुरुआती स्थिति */
             }
             
-            /* मोबाइल और छोटी स्क्रीन के लिए टेक्स्ट का साइज़ एडजस्ट करना */
             @media (max-width: 768px) {
                 .diwali-greeting-text h1 {
                     font-size: 3.5rem;
@@ -382,16 +379,16 @@ URL                    : https://www.jobsinajmer.in/
                 }
             }
 
-
+            /* एनीमेशन से translate हटा दिया गया है क्योंकि फ्लेक्सबॉक्स सेंटरिंग कर रहा है */
             @keyframes fadeInGlow {
                 from { opacity: 0; transform: scale(0.8); }
                 to { opacity: 1; transform: scale(1); }
             }
 
             @keyframes subtlePulse {
-                0% { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), 0 0 15px #FF8F00, 0 0 25px #FFC107; }
-                50% { text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8), 0 0 20px #FF8F00, 0 0 35px #FFC107; }
-                100% { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), 0 0 15px #FF8F00, 0 0 25px #FFC107; }
+                0% { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 15px #FF8F00, 0 0 25px #FFC107; }
+                50% { text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9), 0 0 20px #FF8F00, 0 0 35px #FFC107; }
+                100% { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 15px #FF8F00, 0 0 25px #FFC107; }
             }
         `;
 
@@ -410,8 +407,10 @@ URL                    : https://www.jobsinajmer.in/
         const canvas = document.createElement('canvas');
         canvas.id = 'fireworks-canvas';
 
-        overlay.appendChild(greeting);
+        // पहले कैनवास जोड़ें, फिर टेक्स्ट, ताकि z-index सही से काम करे
         overlay.appendChild(canvas);
+        overlay.appendChild(greeting);
+        
         document.body.appendChild(overlay);
         document.body.classList.add('overlay-active');
 
@@ -507,6 +506,6 @@ URL                    : https://www.jobsinajmer.in/
         window.addEventListener('resize', resizeCanvas);
     });
 </script>
-
+                
 </body>
 </html>

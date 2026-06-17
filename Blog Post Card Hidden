@@ -1,0 +1,28 @@
+<!-- Blog Post Card Hidden Start 1 -->
+<div class="bg-[var(--color-bg-content)] rounded-lg shadow-lg overflow-hidden flex flex-col transition-all duration-300 transform hover:scale-105 hover:shadow-xl hidden-post">
+                <a href="#" class="block">
+                    <img class="w-full h-48 object-cover" 
+                         src="https://placehold.co/600x400/F87171/7F1D1D?text=Post+Image+7" 
+                         alt="Blog post thumbnail"
+                         onerror="this.src='https://placehold.co/600x400/C7C7C7/FFFFFF?text=Image+Error';">
+                </a>
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="inline-block bg-red-100 text-red-800 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-4 w-fit">Security</span>
+                    <a href="#" class="block">
+                        <h2 class="text-2xl font-bold text-[var(--color-text-heading)] hover:text-[var(--color-primary-600)] transition-colors">
+                            Top 5 Web Security Vulnerabilities
+                        </h2>
+                    </a>
+                    <p class="mt-3 text-[var(--color-text-base)] flex-grow">
+                        From XSS to SQL Injection, we cover the most common security threats you need to protect your website against.
+                    </p>
+                    <div class="flex items-center space-x-3 mt-6">
+                        <img class="w-10 h-10 rounded-full shadow-md" src="https://placehold.co/100x100/FBCFE8/9D174D?text=AJ" alt="Author Alice Johnson">
+                        <div>
+                            <span class="font-semibold text-[var(--color-text-subheading)] text-sm">Alice Johnson</span>
+                            <p class="text-sm text-[var(--color-text-muted)]">Oct 10, 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!-- Blog Post Card Hidden End 1 -->
